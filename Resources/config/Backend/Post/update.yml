@@ -1,0 +1,74 @@
+title: 'Editer une actualité'
+breadcrumb:
+    index:
+        label: 'Liste des actualités'
+        action: 'index'
+    update:
+        label: 'Editer une actualité'
+        action: 'update'
+
+formFields:
+    name:
+        label: 'Nom'
+        field: 'name'
+        type: 'text'
+    title:
+        label: 'Titre'
+        field: 'title'
+        type: 'text'
+    resume:
+        label: 'Résumé'
+        field: 'resume'
+        type: 'textarea'
+    body:
+        label: 'Contenu'
+        field: 'body'
+        type: 'tinymce'
+    status:
+        label: 'Etat'
+        type : 'choice'
+        options:
+            type: 'static'
+            field: 'statuses'
+    saveAndStay:
+        label: 'Enregistrer'
+        type : 'submit'
+    saveAndQuit:
+        label: 'Enregistrer & Quitter'
+        type : 'submit'
+
+central:
+    tabs:
+        contenu:
+            name: 'Contenu'
+            icon: 'file-o'
+            formZones:
+                entete:
+                    title: 'En tête'
+                    fields:
+                        name:
+                            col: '6'
+                        title:
+                            col: '6'
+                content:
+                    title: 'Contenu'
+                    fields:
+                        resume:
+                            col: '12'
+                        body:
+                            col: '12'
+
+column:
+    panelZones:
+        publication:
+            headerLabel: 'Publication'
+            icon: 'save'
+            fields:
+                - status
+            footerListFormButtons:
+                saveAndQuit:
+                    field: 'saveAndQuit'
+                    color: 'primary'
+                saveAndStay:
+                    field: 'saveAndStay'
+                    color: 'success'

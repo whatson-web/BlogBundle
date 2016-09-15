@@ -1,0 +1,48 @@
+title: 'Liste des actualités'
+breadcrumb:
+    index:
+        label: 'Liste des actualités'
+        action: 'index'
+
+search: 'true'
+
+formPanelProperties:
+    headerLabel: 'Filtrer les actualités'
+    formFields:
+        name:
+            label: 'Nom'
+            field: 'name'
+            type: 'text'
+            conditionType: 'like'
+            col: '6'
+    footerListButtons:
+        submit:
+            buttonType: 'button'
+            label: 'Filtrer'
+
+tablePanelProperties:
+    headerLabel: 'Liste des actualités'
+    headerListButtons:
+        create:
+            buttonType: 'link'
+            color: 'success'
+            label: 'Créer une actualité'
+            action: 'create'
+            modal: 'true'
+            size: 'xs'
+    tableFields:
+        buttons:
+            update:
+                icon: 'pencil'
+                route: 'bk_wh_blog_post_update'
+                routeParams:
+                    id: 'id'
+            delete:
+                icon: 'trash'
+                color: 'danger'
+                route: 'bk_wh_blog_post_delete'
+                routeParams:
+                    id: 'id'
+                confirm: 'Êtes-vous sûr de vouloir supprimer cette actualité ?'
+        id: 'ID'
+        name: 'Nom'

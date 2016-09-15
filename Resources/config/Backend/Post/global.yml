@@ -1,0 +1,9 @@
+actions:
+    index:
+        route: 'bk_wh_blog_post_index'
+    create:
+        route: 'bk_wh_blog_post_create'
+    update:
+        route: 'bk_wh_blog_post_update'
+        parameters:
+            - id

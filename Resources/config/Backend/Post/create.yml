@@ -1,0 +1,14 @@
+title: 'Créer une actualité'
+formFields:
+    name:
+        label: 'Nom'
+        field: 'name'
+        type: 'text'
+footerFormFields:
+    create:
+        label: 'Créer'
+        field: 'create'
+        color: 'success'
+    createEdit:
+        label: 'Créer & Editer'
+        field: 'createEdit'
