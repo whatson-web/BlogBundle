@@ -7,3 +7,7 @@ actions:
         route: 'bk_wh_blog_post_update'
         parameters:
             - id
+
+menus:
+    main: 'menu-admin'
+    right: 'menu-admin-right'
