@@ -1,9 +1,8 @@
 title: 'Créer une actualité'
+
 formFields:
-    name:
-        label: 'Nom'
-        field: 'name'
-        type: 'text'
+    - name
+
 footerFormFields:
     create:
         label: 'Créer'

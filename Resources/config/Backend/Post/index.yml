@@ -34,15 +34,11 @@ tablePanelProperties:
         buttons:
             update:
                 icon: 'pencil'
-                route: 'bk_wh_blog_post_update'
-                routeParams:
-                    id: 'id'
+                action: 'update'
             delete:
                 icon: 'trash'
                 color: 'danger'
-                route: 'bk_wh_blog_post_delete'
-                routeParams:
-                    id: 'id'
+                action: 'delete'
                 confirm: 'Êtes-vous sûr de vouloir supprimer cette actualité ?'
-        id: 'ID'
-        name: 'Nom'
+        id:
+        name:

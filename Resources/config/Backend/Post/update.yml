@@ -1,4 +1,5 @@
 title: 'Editer une actualité'
+
 breadcrumb:
     index:
         label: 'Liste des actualités'
@@ -9,27 +10,10 @@ breadcrumb:
 
 formFields:
     name:
-        label: 'Nom'
-        field: 'name'
-        type: 'text'
     title:
-        label: 'Titre'
-        field: 'title'
-        type: 'text'
     resume:
-        label: 'Résumé'
-        field: 'resume'
-        type: 'textarea'
     body:
-        label: 'Contenu'
-        field: 'body'
-        type: 'tinymce'
     status:
-        label: 'Etat'
-        type : 'choice'
-        options:
-            type: 'static'
-            field: 'statuses'
     saveAndStay:
         label: 'Enregistrer'
         type : 'submit'

@@ -6,7 +6,37 @@ actions:
     update:
         route: 'bk_wh_blog_post_update'
         parameters:
-            - id
+            id: 'id'
+    delete:
+        route: 'bk_wh_blog_post_delete'
+        parameters:
+            id: 'id'
+
+formFields:
+    id:
+        label: 'ID'
+    name:
+        label: 'Nom'
+        field: 'name'
+        type: 'text'
+    title:
+        label: 'Titre'
+        field: 'title'
+        type: 'text'
+    resume:
+        label: 'Résumé'
+        field: 'resume'
+        type: 'textarea'
+    body:
+        label: 'Contenu'
+        field: 'body'
+        type: 'tinymce'
+    status:
+        label: 'Etat'
+        type : 'choice'
+        options:
+            type: 'static'
+            field: 'statuses'
 
 menus:
     main: 'menu-admin'
