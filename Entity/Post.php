@@ -41,6 +41,12 @@ class Post
 	private $id;
 
 	/**
+	 * @ORM\ManyToOne(targetEntity="WH\AmazonS3MediaBundle\Entity\File")
+	 * @ORM\JoinColumn(referencedColumnName="id", onDelete="SET NULL")
+	 */
+	private $thumb;
+
+	/**
 	 * Get id
 	 *
 	 * @return integer
@@ -49,5 +55,29 @@ class Post
 	{
 
 		return $this->id;
+	}
+
+	/**
+	 * Set thumb
+	 *
+	 * @param \WH\AmazonS3MediaBundle\Entity\File $thumb
+	 *
+	 * @return Post
+	 */
+	public function setThumb(\WH\AmazonS3MediaBundle\Entity\File $thumb = null)
+	{
+		$this->thumb = $thumb;
+
+		return $this;
+	}
+
+	/**
+	 * Get thumb
+	 *
+	 * @return \WH\AmazonS3MediaBundle\Entity\File
+	 */
+	public function getThumb()
+	{
+		return $this->thumb;
 	}
 }

@@ -31,6 +31,12 @@ formFields:
         label: 'Contenu'
         field: 'body'
         type: 'tinymce'
+    thumb:
+        label: 'Vignette'
+        field: 'thumb'
+        type: 'hidden'
+        attr:
+            class: 'amazon-file'
     status:
         label: 'Etat'
         type : 'choice'
