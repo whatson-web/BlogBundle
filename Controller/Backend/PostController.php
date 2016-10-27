@@ -60,7 +60,15 @@ class PostController extends BaseController
      */
     public function updateAction($id, Request $request)
     {
-
+        $post = $this->get('doctrine')->getManager()->getRepository('WHBlogBundle:Post')->get(
+            'one',
+            array(
+                'conditions' => array(
+                    'post.id' => $id,
+                ),
+            )
+        );
+        $this->get('wh_seo.url_generator')->saveUrl($post);
         $updateController = $this->get('bk.wh.back.update_controller');
 
         return $updateController->update($this->getEntityPathConfig(), $id, $request);
