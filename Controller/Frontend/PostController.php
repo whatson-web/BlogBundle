@@ -19,8 +19,6 @@ class PostController extends Controller
 	 */
 	public function viewAction($id, Request $request)
 	{
-		dump($id);
-		dump($request);
 	}
 
 }

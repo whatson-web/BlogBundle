@@ -27,7 +27,6 @@ class Post
 	 */
 	public function __construct()
 	{
-
 		$this->__statusConstruct();
 	}
 
@@ -47,13 +46,17 @@ class Post
 	private $thumb;
 
 	/**
+	 * @ORM\OneToOne(targetEntity="WH\SeoBundle\Entity\Url", cascade={"persist", "remove"})
+	 */
+	private $url;
+
+	/**
 	 * Get id
 	 *
 	 * @return integer
 	 */
 	public function getId()
 	{
-
 		return $this->id;
 	}
 
@@ -79,5 +82,29 @@ class Post
 	public function getThumb()
 	{
 		return $this->thumb;
+	}
+
+	/**
+	 * Set url
+	 *
+	 * @param \WH\SeoBundle\Entity\Url $url
+	 *
+	 * @return Post
+	 */
+	public function setUrl(\WH\SeoBundle\Entity\Url $url = null)
+	{
+		$this->url = $url;
+
+		return $this;
+	}
+
+	/**
+	 * Get url
+	 *
+	 * @return \WH\SeoBundle\Entity\Url
+	 */
+	public function getUrl()
+	{
+		return $this->url;
 	}
 }
