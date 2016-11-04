@@ -51,6 +51,11 @@ class Post
 	private $url;
 
 	/**
+	 * @ORM\OneToOne(targetEntity="WH\SeoBundle\Entity\Metas", cascade={"persist", "remove"})
+	 */
+	private $metas;
+
+	/**
 	 * Get id
 	 *
 	 * @return integer
@@ -106,5 +111,29 @@ class Post
 	public function getUrl()
 	{
 		return $this->url;
+	}
+
+	/**
+	 * Set metas
+	 *
+	 * @param \WH\SeoBundle\Entity\Metas $metas
+	 *
+	 * @return Post
+	 */
+	public function setMetas(\WH\SeoBundle\Entity\Metas $metas = null)
+	{
+		$this->metas = $metas;
+
+		return $this;
+	}
+
+	/**
+	 * Get metas
+	 *
+	 * @return \WH\SeoBundle\Entity\Metas
+	 */
+	public function getMetas()
+	{
+		return $this->metas;
 	}
 }

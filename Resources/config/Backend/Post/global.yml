@@ -45,6 +45,9 @@ formFields:
         options:
             type: 'static'
             field: 'statuses'
+    metas:
+        type: 'form'
+        form: 'WH\SeoBundle\Form\MetasType'
 
 menus:
     main: 'menu-admin'

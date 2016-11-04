@@ -21,6 +21,7 @@ formFields:
     saveAndQuit:
         label: 'Enregistrer & Quitter'
         type : 'submit'
+    metas:
 
 central:
     tabs:
@@ -41,6 +42,18 @@ central:
                         resume:
                             col: '12'
                         body:
+                            col: '12'
+        metas:
+            name: 'SEO'
+            icon: 'file-o'
+            formZones:
+                seo:
+                    fields:
+                        metas.title:
+                            col: '12'
+                        metas.description:
+                            col: '12'
+                        metas.robots:
                             col: '12'
 
 column:
