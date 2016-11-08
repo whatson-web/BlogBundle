@@ -47,7 +47,7 @@ formFields:
             field: 'statuses'
     metas:
         type: 'form'
-        form: 'WH\SeoBundle\Form\MetasType'
+        form: 'WH\SeoBundle\Form\Backend\MetasType'
 
 menus:
     main: 'menu-admin'
