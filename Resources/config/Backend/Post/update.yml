@@ -27,7 +27,7 @@ central:
     tabs:
         contenu:
             name: 'Contenu'
-            icon: 'file-o'
+            icon: 'file-text'
             formZones:
                 entete:
                     title: 'En tête'
@@ -45,7 +45,7 @@ central:
                             col: '12'
         metas:
             name: 'SEO'
-            icon: 'file-o'
+            icon: 'google'
             formZones:
                 seo:
                     fields:
@@ -55,6 +55,10 @@ central:
                             col: '12'
                         metas.robots:
                             col: '12'
+    viewLink:
+        name: 'Voir'
+        icon: 'eye'
+        action: 'view'
 
 column:
     panelZones:
@@ -72,6 +76,6 @@ column:
                     color: 'success'
         thumb:
             headerLabel: 'Vignette'
-            icon: 'picture'
+            icon: 'picture-o'
             fields:
                 - thumb

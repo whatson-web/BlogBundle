@@ -40,7 +40,7 @@ class Post
 	private $id;
 
 	/**
-	 * @ORM\ManyToOne(targetEntity="WH\AmazonS3MediaBundle\Entity\File")
+	 * @ORM\ManyToOne(targetEntity="WH\MediaBundle\Entity\File", cascade={"persist", "remove"})
 	 * @ORM\JoinColumn(referencedColumnName="id", onDelete="SET NULL")
 	 */
 	private $thumb;
@@ -68,11 +68,11 @@ class Post
 	/**
 	 * Set thumb
 	 *
-	 * @param \WH\AmazonS3MediaBundle\Entity\File $thumb
+	 * @param \WH\MediaBundle\Entity\File $thumb
 	 *
 	 * @return Post
 	 */
-	public function setThumb(\WH\AmazonS3MediaBundle\Entity\File $thumb = null)
+	public function setThumb(\WH\MediaBundle\Entity\File $thumb = null)
 	{
 		$this->thumb = $thumb;
 
@@ -82,7 +82,7 @@ class Post
 	/**
 	 * Get thumb
 	 *
-	 * @return \WH\AmazonS3MediaBundle\Entity\File
+	 * @return \WH\MediaBundle\Entity\File
 	 */
 	public function getThumb()
 	{

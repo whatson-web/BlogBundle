@@ -11,6 +11,10 @@ actions:
         route: 'bk_wh_blog_post_delete'
         parameters:
             id: 'id'
+    view:
+        route: 'ft_wh_seo_router_dispatch'
+        parameters:
+            url: 'url.url'
 
 formFields:
     id:
@@ -34,11 +38,8 @@ formFields:
     thumb:
         label: 'Vignette'
         field: 'thumb'
-        type: 'amazon_s3_file'
-#        class: 'WHAmazonS3MediaBundle:File'
-#        choice_label: 'fileName'
-#        attr:
-#            class: 'amazon-file'
+        type: 'wh_file'
+
     status:
         label: 'Etat'
         type : 'choice'
@@ -50,5 +51,5 @@ formFields:
         form: 'WH\SeoBundle\Form\Backend\MetasType'
 
 menus:
-    main: 'menu-admin'
-    right: 'menu-admin-right'
+    main: 'backend-menu'
+    right: 'backend-menu-right'

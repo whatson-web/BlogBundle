@@ -32,6 +32,7 @@ tablePanelProperties:
             size: 'xs'
     tableFields:
         buttons:
+            multipleFields:
             update:
                 icon: 'pencil'
                 action: 'update'

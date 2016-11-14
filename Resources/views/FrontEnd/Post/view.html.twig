@@ -31,6 +31,8 @@
 
 <body>
 
+{{ post | wh_thumb('thumb', 'defaultBanner') }}
+
 {% javascripts %}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
