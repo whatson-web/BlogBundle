@@ -1,0 +1,10 @@
+{% extends 'WHMainBundle:Templates:main.html.twig' %}
+
+{% block metas %}{% include 'WHSeoBundle:Element:metas.html.twig' with {'entity' : post} %}{% endblock %}
+
+{% block main %}
+
+    <h1>{{ post.title }}</h1>
+    {{ post.body | raw }}
+
+{% endblock %}

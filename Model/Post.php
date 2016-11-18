@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\BlogBundle\Entity;
+namespace WH\BlogBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -11,15 +11,14 @@ use WH\LibBundle\Entity\Status;
 /**
  * Post
  *
- * @ORM\Table(name="post")
- * @ORM\Entity(repositoryClass="WH\BlogBundle\Repository\PostRepository")
+ * @ORM\MappedSuperclass
  */
-class Post
+abstract class Post
 {
 
 	use Content, LogDate;
 	use Status {
-		Status::__construct as private __statusConstruct;
+		Status::__construct as protected __statusConstruct;
 	}
 
 	/**
@@ -37,23 +36,28 @@ class Post
 	 * @ORM\Id
 	 * @ORM\GeneratedValue(strategy="AUTO")
 	 */
-	private $id;
+	protected $id;
 
 	/**
 	 * @ORM\ManyToOne(targetEntity="WH\MediaBundle\Entity\File", cascade={"persist", "remove"})
 	 * @ORM\JoinColumn(referencedColumnName="id", onDelete="SET NULL")
 	 */
-	private $thumb;
+	protected $thumb;
 
 	/**
 	 * @ORM\OneToOne(targetEntity="WH\SeoBundle\Entity\Url", cascade={"persist", "remove"})
 	 */
-	private $url;
+	protected $url;
 
 	/**
 	 * @ORM\OneToOne(targetEntity="WH\SeoBundle\Entity\Metas", cascade={"persist", "remove"})
 	 */
-	private $metas;
+	protected $metas;
+
+	/**
+	 * @ORM\ManyToOne(targetEntity="WH\CmsBundle\Entity\Page", cascade={"persist", "remove"})
+	 */
+	protected $page;
 
 	/**
 	 * Get id
@@ -136,4 +140,28 @@ class Post
 	{
 		return $this->metas;
 	}
+
+    /**
+     * Set page
+     *
+     * @param \WH\CmsBundle\Entity\Page $page
+     *
+     * @return Post
+     */
+    public function setPage(\WH\CmsBundle\Entity\Page $page = null)
+    {
+        $this->page = $page;
+
+        return $this;
+    }
+
+    /**
+     * Get page
+     *
+     * @return \WH\CmsBundle\Entity\Page
+     */
+    public function getPage()
+    {
+        return $this->page;
+    }
 }

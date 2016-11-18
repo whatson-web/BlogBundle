@@ -33,6 +33,11 @@ tablePanelProperties:
     tableFields:
         buttons:
             multipleFields:
+            view:
+                icon: 'eye'
+                action: 'view'
+                color: 'info'
+                target: '_blank'
             update:
                 icon: 'pencil'
                 action: 'update'

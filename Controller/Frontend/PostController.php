@@ -4,6 +4,8 @@ namespace WH\BlogBundle\Controller\Frontend;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use WH\LibBundle\Entity\Status;
 
 /**
  * Class PostController
@@ -27,13 +29,16 @@ class PostController extends Controller
 			array(
 				'conditions' => array(
 					'post.id'     => $id,
-					'post.status' => 'published',
+					'post.status' => Status::$STATUS_PUBLISHED,
 				),
 			)
 		);
+		if (!$post) {
+			throw new NotFoundHttpException('Actualité introuvable');
+		}
 
 		return $this->render(
-			'WHBlogBundle:FrontEnd/Post:view.html.twig',
+			'WHBlogBundle:Frontend/Post:view.html.twig',
 			array(
 				'post' => $post,
 			)

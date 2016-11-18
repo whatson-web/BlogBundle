@@ -39,7 +39,6 @@ formFields:
         label: 'Vignette'
         field: 'thumb'
         type: 'wh_file'
-
     status:
         label: 'Etat'
         type : 'choice'
