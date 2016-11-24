@@ -14,7 +14,7 @@ bk_wh_blog:
     type:     annotation
 ```
 
-## Base configuration URL
+## Base configuration SEO
 ```yaml
 wh_seo:
     entities:
