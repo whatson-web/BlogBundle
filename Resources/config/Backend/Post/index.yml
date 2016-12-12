@@ -1,16 +1,16 @@
-title: 'Liste des actualités'
+title: 'News list'
 breadcrumb:
     index:
-        label: 'Liste des actualités'
+        label: 'News list'
         action: 'index'
 
 search: 'true'
 
 formPanelProperties:
-    headerLabel: 'Filtrer les actualités'
+    headerLabel: 'Filter news'
     formFields:
         name:
-            label: 'Nom'
+            label: 'Name'
             field: 'name'
             type: 'text'
             conditionType: 'like'
@@ -18,15 +18,15 @@ formPanelProperties:
     footerListButtons:
         submit:
             buttonType: 'button'
-            label: 'Filtrer'
+            label: 'Filter'
 
 tablePanelProperties:
-    headerLabel: 'Liste des actualités'
+    headerLabel: 'News list'
     headerListButtons:
         create:
             buttonType: 'link'
             color: 'success'
-            label: 'Créer une actualité'
+            label: 'Create a news'
             action: 'create'
             modal: 'true'
             size: 'xs'

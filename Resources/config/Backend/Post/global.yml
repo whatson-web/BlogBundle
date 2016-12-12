@@ -20,27 +20,27 @@ formFields:
     id:
         label: 'ID'
     name:
-        label: 'Nom'
+        label: 'Name'
         field: 'name'
         type: 'text'
     title:
-        label: 'Titre'
+        label: 'Title'
         field: 'title'
         type: 'text'
     resume:
-        label: 'Résumé'
+        label: 'Resume'
         field: 'resume'
         type: 'textarea'
     body:
-        label: 'Contenu'
+        label: 'Content'
         field: 'body'
         type: 'tinymce'
     thumb:
-        label: 'Vignette'
+        label: 'Thumb'
         field: 'thumb'
         type: 'wh_file'
     status:
-        label: 'Etat'
+        label: 'Status'
         type : 'choice'
         options:
             type: 'static'
@@ -50,5 +50,5 @@ formFields:
         form: 'WH\SeoBundle\Form\Backend\MetasType'
 
 menus:
-    main: 'backend-menu'
-    right: 'backend-menu-right'
+    main: 'backendMenu'
+    right: 'backendMenuRight'

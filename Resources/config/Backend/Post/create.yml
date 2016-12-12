@@ -1,13 +1,13 @@
-title: 'Créer une actualité'
+title: 'Create a news'
 
 formFields:
     - name
 
 footerFormFields:
     create:
-        label: 'Créer'
+        label: 'Create'
         field: 'create'
         color: 'success'
     createEdit:
-        label: 'Créer & Editer'
+        label: 'Create & Edit'
         field: 'createEdit'

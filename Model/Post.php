@@ -55,7 +55,8 @@ abstract class Post
 	protected $metas;
 
 	/**
-	 * @ORM\ManyToOne(targetEntity="WH\CmsBundle\Entity\Page", cascade={"persist", "remove"})
+	 * @ORM\ManyToOne(targetEntity="WH\CmsBundle\Entity\Page")
+	 * @ORM\JoinColumn(referencedColumnName="id", onDelete="SET NULL")
 	 */
 	protected $page;
 

@@ -1,11 +1,11 @@
-title: 'Editer une actualité'
+title: 'Edit a news'
 
 breadcrumb:
     index:
-        label: 'Liste des actualités'
+        label: 'News list'
         action: 'index'
     update:
-        label: 'Editer une actualité'
+        label: 'Edit a news'
         action: 'update'
 
 formFields:
@@ -16,28 +16,28 @@ formFields:
     status:
     thumb:
     saveAndStay:
-        label: 'Enregistrer'
+        label: 'Save'
         type : 'submit'
     saveAndQuit:
-        label: 'Enregistrer & Quitter'
+        label: 'Save & Quit'
         type : 'submit'
     metas:
 
 central:
     tabs:
         contenu:
-            name: 'Contenu'
+            name: 'Content'
             icon: 'file-text'
             formZones:
                 entete:
-                    title: 'En tête'
+                    title: 'Header'
                     fields:
                         name:
                             col: '6'
                         title:
                             col: '6'
                 content:
-                    title: 'Contenu'
+                    title: 'Content'
                     fields:
                         resume:
                             col: '12'
