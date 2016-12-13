@@ -12,11 +12,19 @@ use WH\LibBundle\Repository\BaseRepository;
 class PostRepository extends BaseRepository
 {
 
-    /**
-     * @return string
-     */
-    public function getEntityNameQueryBuilder()
-    {
-        return 'post';
-    }
+	/**
+	 * @return \Doctrine\ORM\QueryBuilder
+	 */
+	public function getBaseQuery()
+	{
+		return $this
+			->createQueryBuilder('post')
+			->addSelect('page')
+			->addSelect('url')
+			->addSelect('metas')
+			->leftJoin('post.page', 'page')
+			->leftJoin('post.url', 'url')
+			->leftJoin('post.metas', 'metas')
+			->orderBy('post.created', 'DESC');
+	}
 }
