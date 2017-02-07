@@ -51,3 +51,16 @@ Déclarer les manuellement dans `/app/autoload.php` :
 ```php
 AnnotationRegistry::registerFile(__DIR__ . '/../src/WHEntities/BlogBundle/Post.php');
 ```
+## Ajouter l'onglet dans le menu admin
+Ajouter le code suivant dans le fichier : `src/BackendBundle/Menu/Menu.php`
+
+	$menu->addChild(
+		'posts',
+		array(
+			'label'  => $this->getLabel('globe', 'Actualités'),
+			'route'  => 'bk_wh_blog_post_index',
+			'extras' => array(
+				'safe_label' => true,
+			),
+		)
+	);
