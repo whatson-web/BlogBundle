@@ -56,7 +56,7 @@ central:
                         metas.robots:
                             col: '12'
     viewLink:
-        name: 'Voir'
+        name: 'View'
         icon: 'eye'
         action: 'view'
 
@@ -75,7 +75,7 @@ column:
                     field: 'saveAndStay'
                     color: 'success'
         thumb:
-            headerLabel: 'Vignette'
+            headerLabel: 'Thumb'
             icon: 'picture-o'
             fields:
                 - thumb

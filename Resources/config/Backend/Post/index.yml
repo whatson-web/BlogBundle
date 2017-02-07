@@ -45,6 +45,6 @@ tablePanelProperties:
                 icon: 'trash'
                 color: 'danger'
                 action: 'delete'
-                confirm: 'Êtes-vous sûr de vouloir supprimer cette actualité ?'
+                confirm: 'Do you really want to delete this news ?'
         id:
         name:
