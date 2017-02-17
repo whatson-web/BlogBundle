@@ -1,14 +1,14 @@
 actions:
     index:
-        route: 'bk_wh_blog_post_index'
+        route: 'bk_blog_post_index'
     create:
-        route: 'bk_wh_blog_post_create'
+        route: 'bk_blog_post_create'
     update:
-        route: 'bk_wh_blog_post_update'
+        route: 'bk_blog_post_update'
         parameters:
             id: 'id'
     delete:
-        route: 'bk_wh_blog_post_delete'
+        route: 'bk_blog_post_delete'
         parameters:
             id: 'id'
     view:

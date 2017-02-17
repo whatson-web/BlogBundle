@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\BlogBundle\Controller\Backend;
+namespace BlogBundle\Controller\Backend;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,17 +11,17 @@ use WH\BackendBundle\Controller\Backend\BaseController;
  *
  * Class PostController
  *
- * @package WH\BlogBundle\Controller\Backend
+ * @package BlogBundle\Controller\Backend
  */
 class PostController extends BaseController
 {
 
-	public $bundlePrefix = 'WH';
+	public $bundlePrefix = '';
 	public $bundle = 'BlogBundle';
 	public $entity = 'Post';
 
 	/**
-	 * @Route("/index/", name="bk_wh_blog_post_index")
+	 * @Route("/index/", name="bk_blog_post_index")
 	 *
 	 * @param Request $request
 	 *
@@ -35,7 +35,7 @@ class PostController extends BaseController
 	}
 
 	/**
-	 * @Route("/create/", name="bk_wh_blog_post_create")
+	 * @Route("/create/", name="bk_blog_post_create")
 	 *
 	 * @param Request $request
 	 *
@@ -49,7 +49,7 @@ class PostController extends BaseController
 	}
 
 	/**
-	 * @Route("/update/{id}", name="bk_wh_blog_post_update")
+	 * @Route("/update/{id}", name="bk_blog_post_update")
 	 *
 	 * @param         $id
 	 * @param Request $request
@@ -64,7 +64,7 @@ class PostController extends BaseController
 	}
 
 	/**
-	 * @Route("/delete/{id}", name="bk_wh_blog_post_delete")
+	 * @Route("/delete/{id}", name="bk_blog_post_delete")
 	 *
 	 * @param         $id
 	 *

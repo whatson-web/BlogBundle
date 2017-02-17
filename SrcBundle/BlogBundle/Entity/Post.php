@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\BlogBundle\Entity;
+namespace BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use WH\BlogBundle\Model\Post as BasePost;
@@ -9,9 +9,9 @@ use WH\BlogBundle\Model\Post as BasePost;
  * Class Post
  *
  * @ORM\Table(name="post")
- * @ORM\Entity(repositoryClass="WH\BlogBundle\Repository\PostRepository")
+ * @ORM\Entity(repositoryClass="BlogBundle\Repository\PostRepository")
  *
- * @package WH\BlogBundle\Entity
+ * @package BlogBundle\Entity
  */
 class Post extends BasePost
 {

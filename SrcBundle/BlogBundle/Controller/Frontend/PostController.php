@@ -1,6 +1,6 @@
 <?php
 
-namespace WH\BlogBundle\Controller\Frontend;
+namespace BlogBundle\Controller\Frontend;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -10,7 +10,7 @@ use WH\LibBundle\Entity\Status;
 /**
  * Class PostController
  *
- * @package WH\BlogBundle\Controller\Frontend
+ * @package BlogBundle\Controller\Frontend
  */
 class PostController extends Controller
 {
@@ -24,7 +24,7 @@ class PostController extends Controller
 	public function viewAction($id, Request $request)
 	{
 		$em = $this->get('doctrine')->getManager();
-		$post = $em->getRepository('WHBlogBundle:Post')->get(
+		$post = $em->getRepository('BlogBundle:Post')->get(
 			'one',
 			array(
 				'conditions' => array(
@@ -38,7 +38,7 @@ class PostController extends Controller
 		}
 
 		return $this->render(
-			'WHBlogBundle:Frontend/Post:view.html.twig',
+			'BlogBundle:Frontend/Post:view.html.twig',
 			array(
 				'post' => $post,
 			)
