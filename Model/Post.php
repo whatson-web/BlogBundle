@@ -145,11 +145,11 @@ abstract class Post
     /**
      * Set page
      *
-     * @param \WH\CmsBundle\Entity\Page $page
+     * @param \CmsBundle\Entity\Page
      *
      * @return Post
      */
-    public function setPage(\WH\CmsBundle\Entity\Page $page = null)
+    public function setPage(\CmsBundle\Entity\Page $page = null)
     {
         $this->page = $page;
 
@@ -159,7 +159,7 @@ abstract class Post
     /**
      * Get page
      *
-     * @return \WH\CmsBundle\Entity\Page
+     * @return \CmsBundle\Entity\Page
      */
     public function getPage()
     {
