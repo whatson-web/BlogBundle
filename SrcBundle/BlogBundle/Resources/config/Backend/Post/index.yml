@@ -11,10 +11,22 @@ formPanelProperties:
     formFields:
         name:
             label: 'Name'
-            field: 'name'
+            conditionField: 'name'
             type: 'text'
             conditionType: 'like'
-            col: '6'
+            col: '4'
+        startCreated:
+            label: 'Created >='
+            conditionField: 'created'
+            type: 'datetime'
+            conditionType: 'superiorOrEqual'
+            col: '4'
+        endCreated:
+            label: 'Created <='
+            conditionField: 'created'
+            type: 'datetime'
+            conditionType: 'inferiorOrEqual'
+            col: '4'
     footerListButtons:
         submit:
             buttonType: 'button'
@@ -48,3 +60,6 @@ tablePanelProperties:
                 confirm: 'Do you really want to delete this news ?'
         id:
         name:
+        created:
+            type: 'date'
+            dateFormat: 'd/m/Y H:i:s'

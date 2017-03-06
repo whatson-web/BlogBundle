@@ -15,6 +15,7 @@ formFields:
     body:
     status:
     thumb:
+    created:
     saveAndStay:
         label: 'Save'
         type : 'submit'
@@ -67,6 +68,7 @@ column:
             icon: 'save'
             fields:
                 - status
+                - created
             footerListFormButtons:
                 saveAndQuit:
                     field: 'saveAndQuit'

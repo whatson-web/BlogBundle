@@ -48,6 +48,10 @@ formFields:
     metas:
         type: 'form'
         form: 'WH\SeoBundle\Form\Backend\MetasType'
+    created:
+        label: 'Created'
+        field: 'created'
+        type: 'datetime'
 
 menus:
     main: 'backendMenu'
