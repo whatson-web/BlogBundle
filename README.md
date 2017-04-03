@@ -17,7 +17,7 @@ wh_seo:
     entities:
         BlogBundle\Entity\Post:
             urlFields:
-                - {type: 'field', field: 'page.url'}
+                - {type: 'field', field: 'page.url.url'}
                 - {type: 'field', field: 'slug'}
             defaultMetasFields:
                 title: 'name'
