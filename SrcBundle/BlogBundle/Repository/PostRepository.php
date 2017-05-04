@@ -11,35 +11,19 @@ use WH\LibBundle\Repository\BaseRepository;
  */
 class PostRepository extends BaseRepository
 {
+    public $entityName = 'post';
 
-    public $joins = array(
-        'url'   => array(),
-        'metas' => array(),
-        'page'  => array(),
-    );
+    public $joins = [
+        'url'   => '',
+        'metas' => '',
+        'page'  => '',
+    ];
 
-    /**
-     * @return string
-     */
-    public function getEntityNameQueryBuilder()
-    {
-        return 'post';
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBaseQuery()
-    {
-        $this->qb = $this
-            ->createQueryBuilder($this->getEntityNameQueryBuilder())
-            ->orderBy('post.created', 'DESC');
-
-        $this->addJoins(
-            array()
-        );
-
-        return $this->qb;
-    }
-
+    public $baseJoins = [
+        'url',
+        'metas',
+    ];
+    public $baseOrders = [
+        'post.created' => 'DESC',
+    ];
 }
