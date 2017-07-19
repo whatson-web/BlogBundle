@@ -36,7 +36,6 @@ formFields:
         field: 'body'
         type: 'tinymce'
     thumb:
-        label: 'Thumb'
         field: 'thumb'
         type: 'wh_file'
     status:
