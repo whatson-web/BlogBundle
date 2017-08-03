@@ -62,6 +62,11 @@ abstract class Post
     protected $page;
 
     /**
+     * @Gedmo\Locale
+     */
+    private $locale;
+
+    /**
      * Get id
      *
      * @return integer
@@ -165,5 +170,13 @@ abstract class Post
     public function getPage()
     {
         return $this->page;
+    }
+
+    /**
+     * @param $locale
+     */
+    public function setTranslatableLocale($locale)
+    {
+        $this->locale = $locale;
     }
 }
